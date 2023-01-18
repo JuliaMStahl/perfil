@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import '../controllers/perfil_page_controller.dart';
 
 class PerfilPageView extends GetView<PerfilPageController> {
-  const PerfilPageView({Key? key}) : super(key: key);
+  PerfilPageView({Key? key}) : super(key: key);
+
+  final String nome = Get.arguments;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,8 +18,8 @@ class PerfilPageView extends GetView<PerfilPageController> {
       ),
       body: Center(
         child: Text(
-          'Veja seu perfil',
-          style: TextStyle(fontSize: 20),
+          'Veja seu perfil, $nome',
+          style: const TextStyle(fontSize: 20),
         ),
       ),
     );

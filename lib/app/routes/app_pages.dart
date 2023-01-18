@@ -13,7 +13,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.PERFIL_PAGE,
-      page: () => const PerfilPageView(),
+      page: () => PerfilPageView(),
       binding: PerfilPageBinding(),
     ),
   ];
