@@ -15,7 +15,7 @@ class PerfilPageView extends GetView<PerfilPageController> {
       appBar: AppBar(
         title: const Text('Perfil'),
         centerTitle: true,
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.pink,
       ),
       body: Center(
         child: Column(
