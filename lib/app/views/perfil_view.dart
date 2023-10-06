@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 class PerfilView extends StatelessWidget {
-  PerfilView({Key? key}) : super(key: key);
+  const PerfilView({Key? key, required this.username}) : super(key: key);
 
-  final String? nome = Modular.args.data.toString();
+  final String? username;
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +20,13 @@ class PerfilView extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              nome == null ? 'Argumentos nulos' : 'Perfil de $nome',
+              username == null ? 'Argumentos nulos' : 'Perfil de $username',
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 30),
-            Text(nome!),
+            Text(username!),
             ElevatedButton(
-              onPressed: () => Modular.to.pop(),
+              onPressed: () => Navigator.of(context).pop(),
               child: const Text('Voltar'),
             )
           ],
